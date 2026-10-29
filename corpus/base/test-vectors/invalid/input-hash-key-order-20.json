@@ -1,0 +1,61 @@
+{
+  "canonical_bytes": "eyJpbnB1dHMiOnsiY2l0eSI6IkF1c3RpbiIsImRheXMiOjMsInVuaXRzIjoibWV0cmljIn0sImlzc3Vlcl9jbGFpbXMiOnsicHJvdmVuYW5jZV9jbGFzcyI6IkVYRUNVVEVEIEJZIFpBTUJPIn0sIm91dHB1dHMiOiJzdW5ueSwgNzVGIiwicmVjZWlwdF9zY2hlbWFfdmVyc2lvbiI6IjAuNCIsInRvb2wiOiJnZXRfd2VhdGhlciJ9",
+  "created_at": "2026-10-15T12:00:00.000Z",
+  "execution_context": {
+    "environment": "example-environment",
+    "framework": {
+      "name": "example-framework",
+      "version": "0.1.0"
+    },
+    "model": {
+      "name": "example-model",
+      "version": "1.0"
+    },
+    "payment": {
+      "method": "x402",
+      "reference": "example-settlement-reference"
+    },
+    "readback": {
+      "intended": "record price_usd 97412.55 for BTC_USD",
+      "mismatch": false,
+      "readback": "price_usd is 97412.55",
+      "receipt": "b6c63ac5-f324-4fa7-ad58-c4bf83faa86a",
+      "write_result": "recorded"
+    },
+    "source": "example-source-system"
+  },
+  "field_provenance": {
+    "canonical_bytes": "tool",
+    "output_hash": "tool",
+    "provenance_class": "actor"
+  },
+  "id": "8b2d0f53-6c4e-45b7-bf9c-2d3e4f5a6b7c",
+  "input_hash": "sha256:978afddc0d23bb426339674572d9848526a0ea3a098230391c69a7fc74eaa350",
+  "method_descriptor": {
+    "argument_encoding": "json",
+    "decode": "utf-8 text",
+    "method": "get_weather"
+  },
+  "negative_record": {
+    "not_checked": [
+      "source database state"
+    ],
+    "not_run": [
+      "retry",
+      "compensation"
+    ]
+  },
+  "output_hash": "sha256:67adf270cb0a67f487bc1f2a91f261b9175a45d514bbb4869e8802b47d388b41",
+  "provenance_class": "EXECUTED BY ZAMBO",
+  "receipt_schema_version": "0.4",
+  "rejected_by": "input_hash does not match sha256(canonical JSON of the recorded inputs)",
+  "reversal": {
+    "state": "none"
+  },
+  "tool": {
+    "name": "get_weather",
+    "scope": "public",
+    "version": "1.0.0"
+  },
+  "verification_status": "verified"
+}

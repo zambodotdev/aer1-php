@@ -1,0 +1,16 @@
+{
+  "id": "c17b436d-0d9e-48a1-a5de-08dc80a9767e",
+  "receipt_schema_version": "0.4",
+  "created_at": "2026-10-17T15:04:05.000Z",
+  "tool": {
+    "name": "live_price",
+    "version": "4.0.0",
+    "scope": "public"
+  },
+  "provenance_class": "EXECUTED BY ZAMBO",
+  "canonical_bytes": "eyJjYWxsZXIiOnsiaWQiOiJzaGEyNTY6M2QxMDhmNzI1OTY4N2QzYWRlOWMzMGUyYzNjMzNmMmYxZjkyYTJhNTk0N2IwNDMxOGQ2NjYzZDRkNzlhZjBhYSIsInR5cGUiOiJhbm9ueW1vdXMifSwiaW5wdXRzIjp7InBhaXIiOiJCVENfVVNEIn0sImlzc3Vlcl9jbGFpbXMiOnsicHJvdmVuYW5jZV9jbGFzcyI6IkVYRUNVVEVEIEJZIFpBTUJPIn0sIm91dHB1dHMiOnsicGFpciI6IkJUQ19VU0QiLCJwcmljZV91c2QiOjk3NDEyLjU1LCJzb3VyY2UiOiJDb2luR2Vja28iLCJzdGF0dXMiOiJjb21wbGV0ZSJ9LCJyZWNlaXB0X3NjaGVtYV92ZXJzaW9uIjoiMC40IiwidG9vbCI6ImxpdmVfcHJpY2UifQ==",
+  "canonical_byte_length": 337,
+  "output_hash": "sha256:c92e4cfdc2a00d2914d6d5c596d0936e6bfdba522a125467a08ef6ebce5974ca",
+  "metadata_hash": "sha256:8502f3dfb695d08d986ae9b51b7d86e278d6911bfe0dbfda92a57679037029da",
+  "verification_status": "verified"
+}

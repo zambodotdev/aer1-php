@@ -1,0 +1,152 @@
+{
+ "spec": "draft-zambo-aer1-21 Sections 6 and 13: the receipt id is a label outside the committed canonical payload; the commitment does not cover it. A verifier binds the id only against an external expectation: (a) an externally supplied expected id, or (b) resolution of the id (Section 9) whose resolved record's committed digest must agree with the artifact's. With neither, the verifier MUST report the id as unverified and MUST NOT present verification as covering the id. Fixture: the draft Section 3 receipt 130da435-e157-498e-af90-605866a86a27 (schema 0.3, canonical_byte_length 520, output_hash sha256:0492c18e09059aa2e30ba0864f6aada2ef08475a5b35944cbf2a9ce46d12b9f1), with its real published canonical_bytes. Donor: the live receipt 42fc3298-b1e7-4087-bb1c-f80ef9f12c7c, whose own committed digest is sha256:2c0ab1e3336ffa82c12eaedd9b5cc4931f7c442e3da26912dcfe30d21c62a989. Vectors pin the outcomes measured in the 2026-10-17 id-swap control run (Gigawatt, The Colony). Draft -22 adds the enumerated id_verdict reported alongside id_state (enumerated-verdict proposal by Longcat, accepted 2026-10-18): absent / unverified / matched / resolved / mismatched, pinned per vector as expected_id_verdict (unverified->unverified, verified-expected->matched, verified-resolved->resolved, mismatch->mismatched, and the id-absent vector pinning absent).",
+ "vectors": [
+  {
+   "desc": "The Section 3 fixture presented alone: no expected id, no resolved record. The digest verifies, and the id MUST be reported as unverified: a label outside the commitment, checked against nothing.",
+   "expected_digest": "pass",
+   "expected_id_state": "unverified",
+   "expected_id_verdict": "unverified",
+   "expected_verdict": "pass",
+   "name": "id-alone-unverified",
+   "receipt": {
+    "canonical_byte_length": 520,
+    "canonical_bytes": "eyJjYWxsZXIiOnsiaWQiOiJzaGEyNTY6Mjk0YmNmYjE3YjMzOWI3Nzc2Mzc2Yzk5ZmIwZWQ2MWJkODlmM2E2MTdlMzUzMjM5Zjg4NmMxNGJhOWU1NGI5ZSIsInR5cGUiOiJhbm9ueW1vdXMifSwib3V0cHV0Ijp7InRleHQiOiJCVEMgwrcgJDg0LDQ1Ni4wMCBVU0RcbuKWvCAxLjk0JSAoMjRoKSDCtyBNYXJrZXQgY2FwOiAkMTY5Ni44OEJcblxuTGl2ZSBwcmljZSB2aWEgQ29pbkdlY2tvIMK3IFdlZCwgMjMgU2VwIDIwMjYgMjM6NDU6MjAgR01UIn0sInJlY2VpcHRfc2NoZW1hX3ZlcnNpb24iOiIwLjMiLCJzaWRlX2VmZmVjdHMiOnsiZGVjbGFyYXRpb25faGFzaCI6InNoYTI1Njo0NWFhZDM4ZjNhYTk4MmI5YWFmZTkyZWNiNDE2ZWJlOTg3OTFlZGRiYWY4YWI2ZGYwYmQwODYwNWI3YzFiZmVlIiwiZGVjbGFyZWQiOlsibm9uZSJdLCJzY2hlbWFfdmVyc2lvbiI6InphbWJvLXNpZGUtZWZmZWN0cy8xIn0sInRvb2wiOnsibmFtZSI6ImxpdmVfcHJpY2UiLCJzY29wZSI6InB1YmxpYyIsInZlcnNpb24iOiI0LjAuMCJ9fQ==",
+    "created_at": "2026-09-23T23:45:20.760Z",
+    "id": "130da435-e157-498e-af90-605866a86a27",
+    "output_hash": "sha256:0492c18e09059aa2e30ba0864f6aada2ef08475a5b35944cbf2a9ce46d12b9f1",
+    "provenance_class": "EXECUTED BY ZAMBO",
+    "receipt_schema_version": "0.3",
+    "tool": {
+     "name": "live_price",
+     "scope": "public",
+     "version": "4.0.0"
+    },
+    "verification_status": "verified"
+   }
+  },
+  {
+   "desc": "The fixture checked against an externally supplied expected id equal to its own id. The id is bound by the expectation: id_state verified-expected.",
+   "expected_digest": "pass",
+   "expected_id": "130da435-e157-498e-af90-605866a86a27",
+   "expected_id_state": "verified-expected",
+   "expected_id_verdict": "matched",
+   "expected_verdict": "pass",
+   "name": "id-expected-match",
+   "receipt": {
+    "canonical_byte_length": 520,
+    "canonical_bytes": "eyJjYWxsZXIiOnsiaWQiOiJzaGEyNTY6Mjk0YmNmYjE3YjMzOWI3Nzc2Mzc2Yzk5ZmIwZWQ2MWJkODlmM2E2MTdlMzUzMjM5Zjg4NmMxNGJhOWU1NGI5ZSIsInR5cGUiOiJhbm9ueW1vdXMifSwib3V0cHV0Ijp7InRleHQiOiJCVEMgwrcgJDg0LDQ1Ni4wMCBVU0RcbuKWvCAxLjk0JSAoMjRoKSDCtyBNYXJrZXQgY2FwOiAkMTY5Ni44OEJcblxuTGl2ZSBwcmljZSB2aWEgQ29pbkdlY2tvIMK3IFdlZCwgMjMgU2VwIDIwMjYgMjM6NDU6MjAgR01UIn0sInJlY2VpcHRfc2NoZW1hX3ZlcnNpb24iOiIwLjMiLCJzaWRlX2VmZmVjdHMiOnsiZGVjbGFyYXRpb25faGFzaCI6InNoYTI1Njo0NWFhZDM4ZjNhYTk4MmI5YWFmZTkyZWNiNDE2ZWJlOTg3OTFlZGRiYWY4YWI2ZGYwYmQwODYwNWI3YzFiZmVlIiwiZGVjbGFyZWQiOlsibm9uZSJdLCJzY2hlbWFfdmVyc2lvbiI6InphbWJvLXNpZGUtZWZmZWN0cy8xIn0sInRvb2wiOnsibmFtZSI6ImxpdmVfcHJpY2UiLCJzY29wZSI6InB1YmxpYyIsInZlcnNpb24iOiI0LjAuMCJ9fQ==",
+    "created_at": "2026-09-23T23:45:20.760Z",
+    "id": "130da435-e157-498e-af90-605866a86a27",
+    "output_hash": "sha256:0492c18e09059aa2e30ba0864f6aada2ef08475a5b35944cbf2a9ce46d12b9f1",
+    "provenance_class": "EXECUTED BY ZAMBO",
+    "receipt_schema_version": "0.3",
+    "tool": {
+     "name": "live_price",
+     "scope": "public",
+     "version": "4.0.0"
+    },
+    "verification_status": "verified"
+   }
+  },
+  {
+   "desc": "The control run's swap: the fixture's bytes and committed digest untouched, only the outer id replaced by the donor receipt's id. The digest still verifies (the commitment never covered the id), but against the externally supplied expected id (the fixture's true id) the artifact MUST fail: id mismatch.",
+   "expected_digest": "pass",
+   "expected_id": "130da435-e157-498e-af90-605866a86a27",
+   "expected_id_state": "mismatch",
+   "expected_id_verdict": "mismatched",
+   "expected_verdict": "fail",
+   "name": "id-expected-mismatch",
+   "receipt": {
+    "canonical_byte_length": 520,
+    "canonical_bytes": "eyJjYWxsZXIiOnsiaWQiOiJzaGEyNTY6Mjk0YmNmYjE3YjMzOWI3Nzc2Mzc2Yzk5ZmIwZWQ2MWJkODlmM2E2MTdlMzUzMjM5Zjg4NmMxNGJhOWU1NGI5ZSIsInR5cGUiOiJhbm9ueW1vdXMifSwib3V0cHV0Ijp7InRleHQiOiJCVEMgwrcgJDg0LDQ1Ni4wMCBVU0RcbuKWvCAxLjk0JSAoMjRoKSDCtyBNYXJrZXQgY2FwOiAkMTY5Ni44OEJcblxuTGl2ZSBwcmljZSB2aWEgQ29pbkdlY2tvIMK3IFdlZCwgMjMgU2VwIDIwMjYgMjM6NDU6MjAgR01UIn0sInJlY2VpcHRfc2NoZW1hX3ZlcnNpb24iOiIwLjMiLCJzaWRlX2VmZmVjdHMiOnsiZGVjbGFyYXRpb25faGFzaCI6InNoYTI1Njo0NWFhZDM4ZjNhYTk4MmI5YWFmZTkyZWNiNDE2ZWJlOTg3OTFlZGRiYWY4YWI2ZGYwYmQwODYwNWI3YzFiZmVlIiwiZGVjbGFyZWQiOlsibm9uZSJdLCJzY2hlbWFfdmVyc2lvbiI6InphbWJvLXNpZGUtZWZmZWN0cy8xIn0sInRvb2wiOnsibmFtZSI6ImxpdmVfcHJpY2UiLCJzY29wZSI6InB1YmxpYyIsInZlcnNpb24iOiI0LjAuMCJ9fQ==",
+    "created_at": "2026-09-23T23:45:20.760Z",
+    "id": "42fc3298-b1e7-4087-bb1c-f80ef9f12c7c",
+    "output_hash": "sha256:0492c18e09059aa2e30ba0864f6aada2ef08475a5b35944cbf2a9ce46d12b9f1",
+    "provenance_class": "EXECUTED BY ZAMBO",
+    "receipt_schema_version": "0.3",
+    "tool": {
+     "name": "live_price",
+     "scope": "public",
+     "version": "4.0.0"
+    },
+    "verification_status": "verified"
+   }
+  },
+  {
+   "desc": "The fixture resolved: the record the fixture id resolves to carries the same committed digest as the artifact. The pair (claimed id, committed content) holds at resolution: id_state verified-resolved.",
+   "expected_digest": "pass",
+   "expected_id_state": "verified-resolved",
+   "expected_id_verdict": "resolved",
+   "expected_verdict": "pass",
+   "name": "id-resolution-agreement",
+   "receipt": {
+    "canonical_byte_length": 520,
+    "canonical_bytes": "eyJjYWxsZXIiOnsiaWQiOiJzaGEyNTY6Mjk0YmNmYjE3YjMzOWI3Nzc2Mzc2Yzk5ZmIwZWQ2MWJkODlmM2E2MTdlMzUzMjM5Zjg4NmMxNGJhOWU1NGI5ZSIsInR5cGUiOiJhbm9ueW1vdXMifSwib3V0cHV0Ijp7InRleHQiOiJCVEMgwrcgJDg0LDQ1Ni4wMCBVU0RcbuKWvCAxLjk0JSAoMjRoKSDCtyBNYXJrZXQgY2FwOiAkMTY5Ni44OEJcblxuTGl2ZSBwcmljZSB2aWEgQ29pbkdlY2tvIMK3IFdlZCwgMjMgU2VwIDIwMjYgMjM6NDU6MjAgR01UIn0sInJlY2VpcHRfc2NoZW1hX3ZlcnNpb24iOiIwLjMiLCJzaWRlX2VmZmVjdHMiOnsiZGVjbGFyYXRpb25faGFzaCI6InNoYTI1Njo0NWFhZDM4ZjNhYTk4MmI5YWFmZTkyZWNiNDE2ZWJlOTg3OTFlZGRiYWY4YWI2ZGYwYmQwODYwNWI3YzFiZmVlIiwiZGVjbGFyZWQiOlsibm9uZSJdLCJzY2hlbWFfdmVyc2lvbiI6InphbWJvLXNpZGUtZWZmZWN0cy8xIn0sInRvb2wiOnsibmFtZSI6ImxpdmVfcHJpY2UiLCJzY29wZSI6InB1YmxpYyIsInZlcnNpb24iOiI0LjAuMCJ9fQ==",
+    "created_at": "2026-09-23T23:45:20.760Z",
+    "id": "130da435-e157-498e-af90-605866a86a27",
+    "output_hash": "sha256:0492c18e09059aa2e30ba0864f6aada2ef08475a5b35944cbf2a9ce46d12b9f1",
+    "provenance_class": "EXECUTED BY ZAMBO",
+    "receipt_schema_version": "0.3",
+    "tool": {
+     "name": "live_price",
+     "scope": "public",
+     "version": "4.0.0"
+    },
+    "verification_status": "verified"
+   },
+   "resolved_record": {
+    "id": "130da435-e157-498e-af90-605866a86a27",
+    "output_hash": "sha256:0492c18e09059aa2e30ba0864f6aada2ef08475a5b35944cbf2a9ce46d12b9f1"
+   }
+  },
+  {
+   "desc": "The swapped artifact resolved: it claims the donor id, but the record that id resolves to is the donor's own receipt, whose committed digest disagrees with the artifact's. Resolution breaks the pair: the artifact MUST fail with an id mismatch.",
+   "expected_digest": "pass",
+   "expected_id_state": "mismatch",
+   "expected_id_verdict": "mismatched",
+   "expected_verdict": "fail",
+   "name": "id-resolution-disagreement",
+   "receipt": {
+    "canonical_byte_length": 520,
+    "canonical_bytes": "eyJjYWxsZXIiOnsiaWQiOiJzaGEyNTY6Mjk0YmNmYjE3YjMzOWI3Nzc2Mzc2Yzk5ZmIwZWQ2MWJkODlmM2E2MTdlMzUzMjM5Zjg4NmMxNGJhOWU1NGI5ZSIsInR5cGUiOiJhbm9ueW1vdXMifSwib3V0cHV0Ijp7InRleHQiOiJCVEMgwrcgJDg0LDQ1Ni4wMCBVU0RcbuKWvCAxLjk0JSAoMjRoKSDCtyBNYXJrZXQgY2FwOiAkMTY5Ni44OEJcblxuTGl2ZSBwcmljZSB2aWEgQ29pbkdlY2tvIMK3IFdlZCwgMjMgU2VwIDIwMjYgMjM6NDU6MjAgR01UIn0sInJlY2VpcHRfc2NoZW1hX3ZlcnNpb24iOiIwLjMiLCJzaWRlX2VmZmVjdHMiOnsiZGVjbGFyYXRpb25faGFzaCI6InNoYTI1Njo0NWFhZDM4ZjNhYTk4MmI5YWFmZTkyZWNiNDE2ZWJlOTg3OTFlZGRiYWY4YWI2ZGYwYmQwODYwNWI3YzFiZmVlIiwiZGVjbGFyZWQiOlsibm9uZSJdLCJzY2hlbWFfdmVyc2lvbiI6InphbWJvLXNpZGUtZWZmZWN0cy8xIn0sInRvb2wiOnsibmFtZSI6ImxpdmVfcHJpY2UiLCJzY29wZSI6InB1YmxpYyIsInZlcnNpb24iOiI0LjAuMCJ9fQ==",
+    "created_at": "2026-09-23T23:45:20.760Z",
+    "id": "42fc3298-b1e7-4087-bb1c-f80ef9f12c7c",
+    "output_hash": "sha256:0492c18e09059aa2e30ba0864f6aada2ef08475a5b35944cbf2a9ce46d12b9f1",
+    "provenance_class": "EXECUTED BY ZAMBO",
+    "receipt_schema_version": "0.3",
+    "tool": {
+     "name": "live_price",
+     "scope": "public",
+     "version": "4.0.0"
+    },
+    "verification_status": "verified"
+   },
+   "resolved_record": {
+    "id": "42fc3298-b1e7-4087-bb1c-f80ef9f12c7c",
+    "output_hash": "sha256:2c0ab1e3336ffa82c12eaedd9b5cc4931f7c442e3da26912dcfe30d21c62a989"
+   }
+  },
+  {
+   "desc": "The Section 3 fixture with the id member removed entirely. The artifact carries no receipt id at all: the structural verdict MUST fail (id is a required member) and the enumerated id_verdict MUST be reported as absent.",
+   "expected_digest": "fail",
+   "expected_id_state": "unverified",
+   "expected_id_verdict": "absent",
+   "expected_verdict": "fail",
+   "name": "id-absent",
+   "receipt": {
+    "canonical_byte_length": 520,
+    "canonical_bytes": "eyJjYWxsZXIiOnsiaWQiOiJzaGEyNTY6Mjk0YmNmYjE3YjMzOWI3Nzc2Mzc2Yzk5ZmIwZWQ2MWJkODlmM2E2MTdlMzUzMjM5Zjg4NmMxNGJhOWU1NGI5ZSIsInR5cGUiOiJhbm9ueW1vdXMifSwib3V0cHV0Ijp7InRleHQiOiJCVEMgwrcgJDg0LDQ1Ni4wMCBVU0RcbuKWvCAxLjk0JSAoMjRoKSDCtyBNYXJrZXQgY2FwOiAkMTY5Ni44OEJcblxuTGl2ZSBwcmljZSB2aWEgQ29pbkdlY2tvIMK3IFdlZCwgMjMgU2VwIDIwMjYgMjM6NDU6MjAgR01UIn0sInJlY2VpcHRfc2NoZW1hX3ZlcnNpb24iOiIwLjMiLCJzaWRlX2VmZmVjdHMiOnsiZGVjbGFyYXRpb25faGFzaCI6InNoYTI1Njo0NWFhZDM4ZjNhYTk4MmI5YWFmZTkyZWNiNDE2ZWJlOTg3OTFlZGRiYWY4YWI2ZGYwYmQwODYwNWI3YzFiZmVlIiwiZGVjbGFyZWQiOlsibm9uZSJdLCJzY2hlbWFfdmVyc2lvbiI6InphbWJvLXNpZGUtZWZmZWN0cy8xIn0sInRvb2wiOnsibmFtZSI6ImxpdmVfcHJpY2UiLCJzY29wZSI6InB1YmxpYyIsInZlcnNpb24iOiI0LjAuMCJ9fQ==",
+    "created_at": "2026-09-23T23:45:20.760Z",
+    "output_hash": "sha256:0492c18e09059aa2e30ba0864f6aada2ef08475a5b35944cbf2a9ce46d12b9f1",
+    "provenance_class": "EXECUTED BY ZAMBO",
+    "receipt_schema_version": "0.3",
+    "tool": {
+     "name": "live_price",
+     "scope": "public",
+     "version": "4.0.0"
+    },
+    "verification_status": "verified"
+   }
+  }
+ ]
+}

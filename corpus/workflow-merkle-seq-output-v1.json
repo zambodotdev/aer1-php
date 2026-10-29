@@ -1,0 +1,98 @@
+{
+  "schema": "zambo-workflow-merkle-vectors/1",
+  "vectors": [
+    {
+      "name": "legacy-receipt-id-v0-mixed-version",
+      "merkle_version": "receipt-id-v0",
+      "steps": [
+        { "seq": 1, "receipt_id": "receipt-legacy-a" },
+        { "seq": 2, "receipt_id": "receipt-legacy-b" },
+        { "seq": 3, "receipt_id": "receipt-legacy-c" }
+      ],
+      "merkle_root": "c1732e0beae6e9ff192bd2f670adab138505bef44e2984161a0d41a2dca4ebbd",
+      "expected_verdict": "valid"
+    },
+    {
+      "name": "seq-output-v1-single-step",
+      "merkle_version": "seq-output-v1",
+      "steps": [
+        { "seq": 1, "receipt_id": "receipt-1", "output_hash": "0000000000000000000000000000000000000000000000000000000000000000" }
+      ],
+      "merkle_root": "7ca227d548dcda2dddea74f58c2bea5d1955f090feb2fe00c7b0c5179c95c523",
+      "expected_verdict": "valid"
+    },
+    {
+      "name": "seq-output-v1-multi-step",
+      "merkle_version": "seq-output-v1",
+      "steps": [
+        { "seq": 1, "receipt_id": "receipt-1", "output_hash": "0000000000000000000000000000000000000000000000000000000000000000" },
+        { "seq": 2, "receipt_id": "receipt-2", "output_hash": "1111111111111111111111111111111111111111111111111111111111111111" }
+      ],
+      "merkle_root": "05c3b7f7dd7e18ba3ff6a7459d6950d3fa89f72ac2c88dc6c5576da25878a637",
+      "expected_verdict": "valid"
+    },
+    {
+      "name": "seq-output-v1-odd-level-duplicates-last",
+      "merkle_version": "seq-output-v1",
+      "steps": [
+        { "seq": 1, "receipt_id": "receipt-1", "output_hash": "0000000000000000000000000000000000000000000000000000000000000000" },
+        { "seq": 2, "receipt_id": "receipt-2", "output_hash": "1111111111111111111111111111111111111111111111111111111111111111" },
+        { "seq": 3, "receipt_id": "receipt-3", "output_hash": "2222222222222222222222222222222222222222222222222222222222222222" }
+      ],
+      "merkle_root": "78c156d8900b66498329ea724572d3a3eb9d06148a129445962a6322f3df49ea",
+      "expected_verdict": "valid"
+    },
+    {
+      "name": "seq-output-v1-multi-step-odd-levels",
+      "merkle_version": "seq-output-v1",
+      "steps": [
+        { "seq": 1, "receipt_id": "receipt-1", "output_hash": "0000000000000000000000000000000000000000000000000000000000000000" },
+        { "seq": 2, "receipt_id": "receipt-2", "output_hash": "1111111111111111111111111111111111111111111111111111111111111111" },
+        { "seq": 3, "receipt_id": "receipt-3", "output_hash": "2222222222222222222222222222222222222222222222222222222222222222" },
+        { "seq": 4, "receipt_id": "receipt-4", "output_hash": "3333333333333333333333333333333333333333333333333333333333333333" },
+        { "seq": 5, "receipt_id": "receipt-5", "output_hash": "4444444444444444444444444444444444444444444444444444444444444444" }
+      ],
+      "merkle_root": "0e6b9160833d6f1f56b47487a1c0b2cb1ab4884e0d4592244906f73e4b8b1651",
+      "expected_verdict": "valid"
+    },
+    {
+      "name": "xversion-seq-output-v1-evaluated-as-receipt-id-v0",
+      "desc": "Cross-version must-fail: the seq-output-v1-multi-step close, evaluated under the receipt-id-v0 leaf rule (SHA-256 over the receipt_id string), recomputes to a different root and MUST be rejected. The close itself remains valid under its declared merkle_version; the cross_version_evaluation block carries the must-fail expectation, in the must_not_equal style of merkle-vectors.json.",
+      "source_vector": "seq-output-v1-multi-step",
+      "merkle_version": "seq-output-v1",
+      "steps": [
+        { "seq": 1, "receipt_id": "receipt-1", "output_hash": "0000000000000000000000000000000000000000000000000000000000000000" },
+        { "seq": 2, "receipt_id": "receipt-2", "output_hash": "1111111111111111111111111111111111111111111111111111111111111111" }
+      ],
+      "merkle_root": "05c3b7f7dd7e18ba3ff6a7459d6950d3fa89f72ac2c88dc6c5576da25878a637",
+      "expected_verdict": "valid",
+      "cross_version_evaluation": {
+        "merkle_version": "receipt-id-v0",
+        "computed_root": "242397c374053da292c53b4854271684b030f3cc014d5d3f8dcda83f9f7a95de",
+        "must_not_equal": "05c3b7f7dd7e18ba3ff6a7459d6950d3fa89f72ac2c88dc6c5576da25878a637",
+        "expected_verdict": "invalid",
+        "rejected_by": "merkle_root mismatch"
+      }
+    },
+    {
+      "name": "xversion-receipt-id-v0-evaluated-as-seq-output-v1",
+      "desc": "Cross-version must-fail: the legacy-receipt-id-v0-mixed-version close, evaluated under the seq-output-v1 leaf rule (SHA-256 over seq, colon, output_hash), MUST be rejected. Its steps carry no output_hash member, so the seq-output-v1 leaf cannot be formed and evaluation fails closed; no root computed under seq-output-v1 can confirm this close. The close itself remains valid under its declared merkle_version; the cross_version_evaluation block carries the must-fail expectation, in the must_not_equal style of merkle-vectors.json.",
+      "source_vector": "legacy-receipt-id-v0-mixed-version",
+      "merkle_version": "receipt-id-v0",
+      "steps": [
+        { "seq": 1, "receipt_id": "receipt-legacy-a" },
+        { "seq": 2, "receipt_id": "receipt-legacy-b" },
+        { "seq": 3, "receipt_id": "receipt-legacy-c" }
+      ],
+      "merkle_root": "c1732e0beae6e9ff192bd2f670adab138505bef44e2984161a0d41a2dca4ebbd",
+      "expected_verdict": "valid",
+      "cross_version_evaluation": {
+        "merkle_version": "seq-output-v1",
+        "computed_root": null,
+        "must_not_equal": "c1732e0beae6e9ff192bd2f670adab138505bef44e2984161a0d41a2dca4ebbd",
+        "expected_verdict": "invalid",
+        "rejected_by": "missing output_hash: seq-output-v1 leaf cannot be formed (fail closed)"
+      }
+    }
+  ]
+}

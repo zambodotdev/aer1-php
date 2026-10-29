@@ -1,0 +1,472 @@
+{
+  "spec": "draft-zambo-aer1-18",
+  "chain_version": "v07",
+  "vectors": [
+    {
+      "name": "commit-valid-1",
+      "desc": "Correct commitment over a valid chain: digest, count, job, and timestamp all bind.",
+      "expected_verdict": "valid",
+      "timeline": [
+        {
+          "id": "r-job-7a1f-0",
+          "seq": 1,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjowLCJ0YWciOiJyIn0=",
+          "prev_digest": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "id": "r-job-7a1f-1",
+          "seq": 2,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoxLCJ0YWciOiJyIn0=",
+          "prev_digest": "380d45c6575bdb648e5723adee5a049ff212574d4c6d5dd8ad4cabcc54b6aa56"
+        },
+        {
+          "id": "r-job-7a1f-2",
+          "seq": 3,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoyLCJ0YWciOiJyIn0=",
+          "prev_digest": "c225aa2256e7984575f5a664b690f2b06c86abddc528def6164fb1bbb0aa4cba"
+        },
+        {
+          "id": "r-job-7a1f-3",
+          "seq": 4,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjozLCJ0YWciOiJyIn0=",
+          "prev_digest": "4c56c96378cea5939ad61d082fff24d075649ca888b0c61308307d14034a204a"
+        },
+        {
+          "id": "r-job-7a1f-4",
+          "seq": 5,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5Ijo0LCJ0YWciOiJyIn0=",
+          "prev_digest": "5dd618b1b3b904a92261bb747f8c4511b0882e1454fc41f20a59fa5bd0ded778",
+          "close": true
+        }
+      ],
+      "commitment": {
+        "job_id": "job-7a1f",
+        "final_entry_digest": "79b1e2e26842e7a49f7d0c0606e795c08d84d3877bb95988492601b7451074b0",
+        "entry_count": 5,
+        "published_at": "2026-10-01T18:30:00Z"
+      }
+    },
+    {
+      "name": "commit-digest-mismatch",
+      "desc": "final_entry_digest does not match the recomputed digest of the last entry (rewritten final entry).",
+      "expected_verdict": "invalid",
+      "timeline": [
+        {
+          "id": "r-job-7a1f-0",
+          "seq": 1,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjowLCJ0YWciOiJyIn0=",
+          "prev_digest": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "id": "r-job-7a1f-1",
+          "seq": 2,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoxLCJ0YWciOiJyIn0=",
+          "prev_digest": "380d45c6575bdb648e5723adee5a049ff212574d4c6d5dd8ad4cabcc54b6aa56"
+        },
+        {
+          "id": "r-job-7a1f-2",
+          "seq": 3,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoyLCJ0YWciOiJyIn0=",
+          "prev_digest": "c225aa2256e7984575f5a664b690f2b06c86abddc528def6164fb1bbb0aa4cba"
+        },
+        {
+          "id": "r-job-7a1f-3",
+          "seq": 4,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjozLCJ0YWciOiJyIn0=",
+          "prev_digest": "4c56c96378cea5939ad61d082fff24d075649ca888b0c61308307d14034a204a"
+        },
+        {
+          "id": "r-job-7a1f-4",
+          "seq": 5,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5Ijo0LCJ0YWciOiJyIn0=",
+          "prev_digest": "5dd618b1b3b904a92261bb747f8c4511b0882e1454fc41f20a59fa5bd0ded778",
+          "close": true
+        }
+      ],
+      "commitment": {
+        "job_id": "job-7a1f",
+        "final_entry_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+        "entry_count": 5,
+        "published_at": "2026-10-01T18:30:00Z"
+      }
+    },
+    {
+      "name": "commit-count-mismatch",
+      "desc": "entry_count does not match the timeline length (truncated chain re-linked).",
+      "expected_verdict": "invalid",
+      "timeline": [
+        {
+          "id": "r-job-7a1f-0",
+          "seq": 1,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjowLCJ0YWciOiJyIn0=",
+          "prev_digest": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "id": "r-job-7a1f-1",
+          "seq": 2,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoxLCJ0YWciOiJyIn0=",
+          "prev_digest": "380d45c6575bdb648e5723adee5a049ff212574d4c6d5dd8ad4cabcc54b6aa56"
+        },
+        {
+          "id": "r-job-7a1f-2",
+          "seq": 3,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoyLCJ0YWciOiJyIn0=",
+          "prev_digest": "c225aa2256e7984575f5a664b690f2b06c86abddc528def6164fb1bbb0aa4cba"
+        },
+        {
+          "id": "r-job-7a1f-3",
+          "seq": 4,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjozLCJ0YWciOiJyIn0=",
+          "prev_digest": "4c56c96378cea5939ad61d082fff24d075649ca888b0c61308307d14034a204a"
+        },
+        {
+          "id": "r-job-7a1f-4",
+          "seq": 5,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5Ijo0LCJ0YWciOiJyIn0=",
+          "prev_digest": "5dd618b1b3b904a92261bb747f8c4511b0882e1454fc41f20a59fa5bd0ded778",
+          "close": true
+        }
+      ],
+      "commitment": {
+        "job_id": "job-7a1f",
+        "final_entry_digest": "79b1e2e26842e7a49f7d0c0606e795c08d84d3877bb95988492601b7451074b0",
+        "entry_count": 7,
+        "published_at": "2026-10-01T18:30:00Z"
+      }
+    },
+    {
+      "name": "commit-job-mismatch",
+      "desc": "commitment job_id does not match the timeline's job_id (spliced jobs).",
+      "expected_verdict": "invalid",
+      "timeline": [
+        {
+          "id": "r-job-7a1f-0",
+          "seq": 1,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjowLCJ0YWciOiJyIn0=",
+          "prev_digest": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "id": "r-job-7a1f-1",
+          "seq": 2,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoxLCJ0YWciOiJyIn0=",
+          "prev_digest": "380d45c6575bdb648e5723adee5a049ff212574d4c6d5dd8ad4cabcc54b6aa56"
+        },
+        {
+          "id": "r-job-7a1f-2",
+          "seq": 3,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoyLCJ0YWciOiJyIn0=",
+          "prev_digest": "c225aa2256e7984575f5a664b690f2b06c86abddc528def6164fb1bbb0aa4cba"
+        },
+        {
+          "id": "r-job-7a1f-3",
+          "seq": 4,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjozLCJ0YWciOiJyIn0=",
+          "prev_digest": "4c56c96378cea5939ad61d082fff24d075649ca888b0c61308307d14034a204a"
+        },
+        {
+          "id": "r-job-7a1f-4",
+          "seq": 5,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5Ijo0LCJ0YWciOiJyIn0=",
+          "prev_digest": "5dd618b1b3b904a92261bb747f8c4511b0882e1454fc41f20a59fa5bd0ded778",
+          "close": true
+        }
+      ],
+      "commitment": {
+        "job_id": "job-0000-spliced",
+        "final_entry_digest": "79b1e2e26842e7a49f7d0c0606e795c08d84d3877bb95988492601b7451074b0",
+        "entry_count": 5,
+        "published_at": "2026-10-01T18:30:00Z"
+      }
+    },
+    {
+      "name": "commit-malformed-missing",
+      "desc": "Commitment object missing final_entry_digest entirely.",
+      "expected_verdict": "invalid",
+      "timeline": [
+        {
+          "id": "r-job-7a1f-0",
+          "seq": 1,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjowLCJ0YWciOiJyIn0=",
+          "prev_digest": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "id": "r-job-7a1f-1",
+          "seq": 2,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoxLCJ0YWciOiJyIn0=",
+          "prev_digest": "380d45c6575bdb648e5723adee5a049ff212574d4c6d5dd8ad4cabcc54b6aa56"
+        },
+        {
+          "id": "r-job-7a1f-2",
+          "seq": 3,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoyLCJ0YWciOiJyIn0=",
+          "prev_digest": "c225aa2256e7984575f5a664b690f2b06c86abddc528def6164fb1bbb0aa4cba"
+        },
+        {
+          "id": "r-job-7a1f-3",
+          "seq": 4,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjozLCJ0YWciOiJyIn0=",
+          "prev_digest": "4c56c96378cea5939ad61d082fff24d075649ca888b0c61308307d14034a204a"
+        },
+        {
+          "id": "r-job-7a1f-4",
+          "seq": 5,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5Ijo0LCJ0YWciOiJyIn0=",
+          "prev_digest": "5dd618b1b3b904a92261bb747f8c4511b0882e1454fc41f20a59fa5bd0ded778",
+          "close": true
+        }
+      ],
+      "commitment": {
+        "job_id": "job-7a1f",
+        "entry_count": 5,
+        "published_at": "2026-10-01T18:30:00Z"
+      }
+    },
+    {
+      "name": "commit-malformed-types",
+      "desc": "Commitment with wrong member types: uppercase digest, string count, bad timestamp.",
+      "expected_verdict": "invalid",
+      "timeline": [
+        {
+          "id": "r-job-7a1f-0",
+          "seq": 1,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjowLCJ0YWciOiJyIn0=",
+          "prev_digest": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "id": "r-job-7a1f-1",
+          "seq": 2,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoxLCJ0YWciOiJyIn0=",
+          "prev_digest": "380d45c6575bdb648e5723adee5a049ff212574d4c6d5dd8ad4cabcc54b6aa56"
+        },
+        {
+          "id": "r-job-7a1f-2",
+          "seq": 3,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoyLCJ0YWciOiJyIn0=",
+          "prev_digest": "c225aa2256e7984575f5a664b690f2b06c86abddc528def6164fb1bbb0aa4cba"
+        },
+        {
+          "id": "r-job-7a1f-3",
+          "seq": 4,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjozLCJ0YWciOiJyIn0=",
+          "prev_digest": "4c56c96378cea5939ad61d082fff24d075649ca888b0c61308307d14034a204a"
+        },
+        {
+          "id": "r-job-7a1f-4",
+          "seq": 5,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5Ijo0LCJ0YWciOiJyIn0=",
+          "prev_digest": "5dd618b1b3b904a92261bb747f8c4511b0882e1454fc41f20a59fa5bd0ded778",
+          "close": true
+        }
+      ],
+      "commitment": {
+        "job_id": "job-7a1f",
+        "final_entry_digest": "79B1E2E26842E7A49F7D0C0606E795C08D84D3877BB95988492601B7451074B0",
+        "entry_count": "5",
+        "published_at": "2026-13-45T99:99:99Z"
+      }
+    },
+    {
+      "name": "commit-not-an-object",
+      "desc": "Commitment is not a JSON object at all.",
+      "expected_verdict": "invalid",
+      "timeline": [
+        {
+          "id": "r-job-7a1f-0",
+          "seq": 1,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjowLCJ0YWciOiJyIn0=",
+          "prev_digest": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "id": "r-job-7a1f-1",
+          "seq": 2,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoxLCJ0YWciOiJyIn0=",
+          "prev_digest": "380d45c6575bdb648e5723adee5a049ff212574d4c6d5dd8ad4cabcc54b6aa56"
+        },
+        {
+          "id": "r-job-7a1f-2",
+          "seq": 3,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoyLCJ0YWciOiJyIn0=",
+          "prev_digest": "c225aa2256e7984575f5a664b690f2b06c86abddc528def6164fb1bbb0aa4cba"
+        },
+        {
+          "id": "r-job-7a1f-3",
+          "seq": 4,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjozLCJ0YWciOiJyIn0=",
+          "prev_digest": "4c56c96378cea5939ad61d082fff24d075649ca888b0c61308307d14034a204a"
+        },
+        {
+          "id": "r-job-7a1f-4",
+          "seq": 5,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5Ijo0LCJ0YWciOiJyIn0=",
+          "prev_digest": "5dd618b1b3b904a92261bb747f8c4511b0882e1454fc41f20a59fa5bd0ded778",
+          "close": true
+        }
+      ],
+      "commitment": "not-an-object"
+    },
+    {
+      "name": "x-entry-count-float",
+      "desc": "entry_count written as a float with an integer value",
+      "expected_verdict": "invalid",
+      "timeline": [
+        {
+          "id": "r-job-7a1f-0",
+          "seq": 1,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjowLCJ0YWciOiJyIn0=",
+          "prev_digest": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "id": "r-job-7a1f-1",
+          "seq": 2,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoxLCJ0YWciOiJyIn0=",
+          "prev_digest": "380d45c6575bdb648e5723adee5a049ff212574d4c6d5dd8ad4cabcc54b6aa56"
+        },
+        {
+          "id": "r-job-7a1f-2",
+          "seq": 3,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjoyLCJ0YWciOiJyIn0=",
+          "prev_digest": "c225aa2256e7984575f5a664b690f2b06c86abddc528def6164fb1bbb0aa4cba"
+        },
+        {
+          "id": "r-job-7a1f-3",
+          "seq": 4,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5IjozLCJ0YWciOiJyIn0=",
+          "prev_digest": "4c56c96378cea5939ad61d082fff24d075649ca888b0c61308307d14034a204a"
+        },
+        {
+          "id": "r-job-7a1f-4",
+          "seq": 5,
+          "job_id": "job-7a1f",
+          "tool": "price_lookup",
+          "provenance_class": "LOGGED BY AGENT",
+          "canonical_bytes": "eyJqb2IiOiJqb2ItN2ExZiIsImVudHJ5Ijo0LCJ0YWciOiJyIn0=",
+          "prev_digest": "5dd618b1b3b904a92261bb747f8c4511b0882e1454fc41f20a59fa5bd0ded778",
+          "close": true
+        }
+      ],
+      "commitment": {
+        "job_id": "job-7a1f",
+        "final_entry_digest": "79b1e2e26842e7a49f7d0c0606e795c08d84d3877bb95988492601b7451074b0",
+        "entry_count": 5.0,
+        "published_at": "2026-10-01T18:30:00Z"
+      }
+    }
+  ]
+}

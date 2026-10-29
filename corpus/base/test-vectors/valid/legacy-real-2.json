@@ -1,0 +1,80 @@
+{
+  "id": "f2815391-ebc0-4a51-bbe3-613434371534",
+  "tool": "zambo_universal",
+  "receipt_schema_version": "0.3",
+  "tool_context": {
+    "name": "zambo_universal",
+    "version": "4.0.0",
+    "scope": "public"
+  },
+  "caller": {
+    "type": "anonymous",
+    "id": "sha256:4ed435a4920392ba2e90b0f49338d1d5ab367f67e026cbed847db13917ed5df0"
+  },
+  "side_effects": {
+    "declared": [
+      "state_write"
+    ],
+    "schema_version": "zambo-side-effects/1",
+    "declaration_hash": "sha256:dfb4412aa429d3ac637a05668c435bcc90a251363fcdd49f7b85ae4ab55b5bc9"
+  },
+  "timestamp": "2026-10-06T15:23:10.819Z",
+  "receipt_type": "execution",
+  "execution_status": "not_executed",
+  "verification_status": "not_verified",
+  "provenance_class": "EXECUTED BY ZAMBO",
+  "price": {
+    "zambo_burned": 0,
+    "burn_status": "not_attempted",
+    "program": "Token-2022",
+    "treasury": "GuGoJPgF2wufK5U983oTwW5mXJb3GN9KNyj9S5gyffkH"
+  },
+  "auth_scope": "public",
+  "hash_algorithm": "sha256",
+  "canonical_bytes": "eyJjYWxsZXIiOnsiaWQiOiJzaGEyNTY6NGVkNDM1YTQ5MjAzOTJiYTJlOTBiMGY0OTMzOGQxZDVhYjM2N2Y2N2UwMjZjYmVkODQ3ZGIxMzkxN2VkNWRmMCIsInR5cGUiOiJhbm9ueW1vdXMifSwib3V0cHV0Ijp7ImNsb3Nlc3RfdG9vbCI6eyJjYWxsYWJsZSI6ImJvdW50eV9zY2FuKHthZGRyZXNzOiBcIjxwdWJsaWMgd2FsbGV0IGFkZHJlc3M+XCJ9KSIsImRlc2NyaXB0aW9uIjoiQXV0b25vbW91cyBhZ2VudHMgaHVudGluZyB1bmNsYWltZWQgY3J5cHRvIHZhbHVlIDI0LzciLCJuYW1lIjoiYm91bnR5X3NjYW4iLCJyZXF1aXJlZF9hcmd1bWVudHMiOlsiYWRkcmVzcyJdfSwiZXhlY3V0ZWQiOmZhbHNlLCJleGVjdXRlZF90b29scyI6W10sImV4ZWN1dGlvbl9zdGF0ZSI6Im5vdF9leGVjdXRlZF9oZXJlIiwibWVzc2FnZSI6Ik5vIG1hdGNoaW5nIGV4ZWN1dGFibGUgWmFtYm8gdG9vbCB3YXMgaWRlbnRpZmllZCBmb3IgdGhpcyByZXF1ZXN0LiBOb3RoaW5nIHdhcyBleGVjdXRlZCwgYW5kIG5vIHJlc3VsdCBpcyBiZWluZyBjbGFpbWVkLiIsIm5leHRfYWN0aW9uIjoiSWYgdGhpcyB0b29sIGZpdHMgdGhlIHVzZXIncyBnb2FsLCBjYWxsIGJvdW50eV9zY2FuIHdpdGggaXRzIHJlcXVpcmVkIGFyZ3VtZW50czsgb3RoZXJ3aXNlIGFzayB0aGUgdXNlciB0byBjbGFyaWZ5IG9yIGNob29zZSBhIHN1cHBvcnRlZCB0YXNrLiIsInBsYW5uZWRfdG9vbHMiOltdLCJyZXF1ZXN0ZWRfbmVlZCI6IldoYXQgaXMgMisyPyBSZXBseSB3aXRoIGp1c3QgdGhlIG51bWJlci4iLCJyZXN1bHRfc3RhdHVzIjoibm90X2V4ZWN1dGFibGUiLCJzdGF0dXMiOiJub3RfZXhlY3V0YWJsZSIsInZlcmlmeSI6eyJtZXNzYWdlIjoiTm8gdG9vbCB3YXMgZXhlY3V0ZWQgZm9yIHRoaXMgcmVxdWVzdCwgc28gdGhlcmUgaXMgbm8gY29tcGxldGlvbiByZWNlaXB0LiIsInN0YXR1cyI6Im5vdF9leGVjdXRlZF9oZXJlIn0sIndoYXRfemFtYm9fY2FuX2RvIjoiVGhlIGxpdmUgY2F0YWxvZyBpbmNsdWRlcyB0b29scyBmb3IgY29kZSBhbmQgd2Vic2l0ZSBhdWRpdHMsIGNvZGUgcmVwYWlyLCBsZWFkIGdlbmVyYXRpb24sIHdhbGxldCBhbmQgdG9rZW4gYW5hbHlzaXMsIHByb21wdC1pbmplY3Rpb24gY2hlY2tzLCBsaXZlIG1hcmtldCBkYXRhLCBhbmQgc3RyYXRlZ3kgd29ya2Zsb3dzLiJ9LCJyZWNlaXB0X3NjaGVtYV92ZXJzaW9uIjoiMC4zIiwic2lkZV9lZmZlY3RzIjp7ImRlY2xhcmF0aW9uX2hhc2giOiJzaGEyNTY6ZGZiNDQxMmFhNDI5ZDNhYzYzN2EwNTY2OGM0MzViY2M5MGEyNTEzNjNmY2RkNDlmN2I4NWFlNGFiNTViNWJjOSIsImRlY2xhcmVkIjpbInN0YXRlX3dyaXRlIl0sInNjaGVtYV92ZXJzaW9uIjoiemFtYm8tc2lkZS1lZmZlY3RzLzEifSwidG9vbCI6eyJuYW1lIjoiemFtYm9fdW5pdmVyc2FsIiwic2NvcGUiOiJwdWJsaWMiLCJ2ZXJzaW9uIjoiNC4wLjAifX0=",
+  "canonical_byte_length": 1442,
+  "output_hash": "sha256:75d755619d3d2e6e2f7f50e9961c434701eeec2c7bfcf2188b89004ab5e2b63f",
+  "anchor": {
+    "event_id": "b8e46f9bafddf9ac1c13c1c5fcc8c193c7b04f90bcb3faae929d2982b04bb6f9",
+    "pubkey": "e13475107d30c918ec664adf2ab1141024a22fb35190f82c9e933704fa49af41",
+    "relays": [
+      "wss://relay.damus.io",
+      "wss://nos.lol",
+      "wss://relay.primal.net"
+    ],
+    "status": "pending",
+    "schema_version": "zambo-receipt-anchor/1",
+    "envelope": {
+      "schema_version": "zambo-receipt-anchor/1",
+      "receipt_uuid": "f2815391-ebc0-4a51-bbe3-613434371534",
+      "output_sha256": "sha256:75d755619d3d2e6e2f7f50e9961c434701eeec2c7bfcf2188b89004ab5e2b63f",
+      "evidence_sha256": "sha256:705d6a87c3b8345613eae0c06890edd96adf7461f28f20004096995867cdd872",
+      "evidence_byte_length": 3435,
+      "evidence_url": "https://zambo.dev/api/evidence/705d6a87c3b8345613eae0c06890edd96adf7461f28f20004096995867cdd872",
+      "anchored_at": "2026-10-06T15:23:10.819Z"
+    },
+    "envelope_bytes": "{\"anchored_at\":\"2026-10-06T15:23:10.819Z\",\"evidence_byte_length\":3435,\"evidence_sha256\":\"sha256:705d6a87c3b8345613eae0c06890edd96adf7461f28f20004096995867cdd872\",\"evidence_url\":\"https://zambo.dev/api/evidence/705d6a87c3b8345613eae0c06890edd96adf7461f28f20004096995867cdd872\",\"output_sha256\":\"sha256:75d755619d3d2e6e2f7f50e9961c434701eeec2c7bfcf2188b89004ab5e2b63f\",\"receipt_uuid\":\"f2815391-ebc0-4a51-bbe3-613434371534\",\"schema_version\":\"zambo-receipt-anchor/1\"}"
+  },
+  "status": "preview",
+  "result_status": "preview",
+  "free_used": 1,
+  "free_remaining": 19,
+  "free_limit": 20,
+  "metered_bucket": "free_20",
+  "metered_used": 1,
+  "metered_remaining": 19,
+  "metered_limit": 20,
+  "bonus_calls_remaining": 0,
+  "server": "zambo.dev/mcp",
+  "audit": "https://zambo.dev/run/f2815391-ebc0-4a51-bbe3-613434371534",
+  "signal_handle": null,
+  "provenance": null,
+  "evidence_sha256": "sha256:705d6a87c3b8345613eae0c06890edd96adf7461f28f20004096995867cdd872",
+  "evidence_url": "/api/evidence/705d6a87c3b8345613eae0c06890edd96adf7461f28f20004096995867cdd872",
+  "evidence_byte_length": 3435,
+  "evidence_content_type": "application/json",
+  "evidence_source_url": null,
+  "evidence_status": "captured",
+  "external_evidence": [],
+  "persistence": "stored"
+}

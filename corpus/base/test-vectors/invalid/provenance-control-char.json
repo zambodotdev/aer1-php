@@ -1,0 +1,14 @@
+{
+  "id": "9c3e1064-7d5f-46c8-c0ad-3e4f5a6b7c8d",
+  "receipt_schema_version": "0.4",
+  "created_at": "2026-10-15T12:00:00.000Z",
+  "tool": {
+    "name": "get_weather",
+    "version": "1.0.0",
+    "scope": "public"
+  },
+  "provenance_class": "EXECUTED BY ZAM\u0001BO",
+  "canonical_bytes": "eyJpbnB1dHMiOnsiY2l0eSI6IkF1c3RpbiJ9LCJpc3N1ZXJfY2xhaW1zIjp7InByb3ZlbmFuY2VfY2xhc3MiOiJFWEVDVVRFRCBCWSBaQU1cdTAwMDFCTyJ9LCJvdXRwdXRzIjoic3VubnksIDc1RiIsInJlY2VpcHRfc2NoZW1hX3ZlcnNpb24iOiIwLjQiLCJ0b29sIjoiZ2V0X3dlYXRoZXIifQ==",
+  "output_hash": "sha256:9024675177ccbfa12192577bba1bdddde51b551f6e715f6029fcd1ccd91f496f",
+  "verification_status": "verified"
+}

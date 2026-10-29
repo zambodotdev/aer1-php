@@ -1,0 +1,134 @@
+{
+  "id": "c5dadb0a-8f99-40f6-b30a-40852435b752",
+  "created_at": "2026-10-06T14:09:44.678Z",
+  "receipt_schema_version": "0.3",
+  "job_summary": "MCP tool execution: zambo_universal",
+  "tools": [
+    "zambo_universal"
+  ],
+  "steps": [
+    {
+      "tool": "zambo_universal",
+      "status": "success",
+      "started_at": "2026-10-06T14:09:44.462Z",
+      "completed_at": "2026-10-06T14:09:44.644Z"
+    }
+  ],
+  "output_hash": "sha256:86b2cd9f80d01e8a8a742903a74940bd09028322e7786dbe44f59683bb11e319",
+  "hash_algorithm": "sha256",
+  "canonical_bytes": "eyJjYWxsZXIiOnsiaWQiOiJzaGEyNTY6M2QxMDhmNzI1OTY4N2QzYWRlOWMzMGUyYzNjMzNmMmYxZjkyYTJhNTk0N2IwNDMxOGQ2NjYzZDRkNzlhZjBhYSIsInR5cGUiOiJhbm9ueW1vdXMifSwib3V0cHV0Ijp7ImV4ZWN1dGVkIjp0cnVlLCJleGVjdXRlZF90b29scyI6WyJsaXZlX3ByaWNlIl0sInByaW1hcnlfdG9vbCI6ImxpdmVfcHJpY2UiLCJyZXN1bHQiOiJCVEMgwrcgJDg2LDE2NC4wMCBVU0RcbuKWvCAwLjUwJSAoMjRoKSDCtyBNYXJrZXQgY2FwOiAkMTczMS4zNkJcblxuTGl2ZSBwcmljZSB2aWEgQ29pbkdlY2tvIMK3IFR1ZSwgMDYgT2N0IDIwMjYgMTQ6MDk6NDQgR01UIiwic3RhdHVzIjoiZXhlY3V0ZWQiLCJ2ZXJpZnkiOnsibWVzc2FnZSI6IkJUQy1VU0QgcHJpY2UgYW5kIHNvdXJjZSB3ZXJlIHJldHVybmVkIGJ5IHRoZSBsaXZlIHByaWNlIHByb3ZpZGVyLiIsInN0YXR1cyI6ImNvbXBsZXRlIn19LCJyZWNlaXB0X3NjaGVtYV92ZXJzaW9uIjoiMC4zIiwic2lkZV9lZmZlY3RzIjp7ImRlY2xhcmF0aW9uX2hhc2giOiJzaGEyNTY6ZGZiNDQxMmFhNDI5ZDNhYzYzN2EwNTY2OGM0MzViY2M5MGEyNTEzNjNmY2RkNDlmN2I4NWFlNGFiNTViNWJjOSIsImRlY2xhcmVkIjpbInN0YXRlX3dyaXRlIl0sInNjaGVtYV92ZXJzaW9uIjoiemFtYm8tc2lkZS1lZmZlY3RzLzEifSwidG9vbCI6eyJuYW1lIjoiemFtYm9fdW5pdmVyc2FsIiwic2NvcGUiOiJwdWJsaWMiLCJ2ZXJzaW9uIjoiNC4wLjAifX0=",
+  "canonical_byte_length": 740,
+  "verification_status": "verified",
+  "session_trail": [],
+  "result_preview": "{\"status\":\"executed\",\"primary_tool\":\"live_price\",\"executed\":true,\"executed_tools\":[\"live_price\"],\"result\":\"BTC · $86,164.00 USD\\n▼ 0.50% (24h) · Market cap: $1731.36B\\n\\nLive price via CoinGecko · Tue, 06 Oct 2026 14:09:44 GMT\",\"verify\":{\"status\":\"complete\",\"message\":\"BTC-USD price and source were returned by the live price provider.\"}}",
+  "free_used": 1,
+  "free_remaining": 19,
+  "free_limit": 20,
+  "signal_handle": null,
+  "tool": {
+    "name": "zambo_universal",
+    "version": "4.0.0",
+    "scope": "public"
+  },
+  "caller": {
+    "type": "anonymous",
+    "id": "sha256:3d108f7259687d3ade9c30e2c3c33f2f1f92a2a5947b04318d6663d4d79af0aa"
+  },
+  "side_effects": {
+    "declared": [
+      "state_write"
+    ],
+    "schema_version": "zambo-side-effects/1",
+    "declaration_hash": "sha256:dfb4412aa429d3ac637a05668c435bcc90a251363fcdd49f7b85ae4ab55b5bc9"
+  },
+  "evidence_sha256": "sha256:b985d17f844870425f1a00b8e87bad1a33e46113a8e27d73947acf2e5533cfd1",
+  "evidence_url": "/api/evidence/b985d17f844870425f1a00b8e87bad1a33e46113a8e27d73947acf2e5533cfd1",
+  "evidence_byte_length": 99,
+  "evidence_content_type": "application/json",
+  "evidence_source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true&include_market_cap=true",
+  "evidence_status": "captured",
+  "external_evidence": [],
+  "status": "executed",
+  "state_hash": null,
+  "provenance": {
+    "source": "CoinGecko",
+    "request": {
+      "need": "what is the current price of bitcoin",
+      "format": "markdown",
+      "upstream_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true&include_market_cap=true"
+    },
+    "queried_at": "2026-10-06T14:09:44.596Z",
+    "response_sha256": "sha256:b985d17f844870425f1a00b8e87bad1a33e46113a8e27d73947acf2e5533cfd1"
+  },
+  "provenance_class": "EXECUTED BY ZAMBO",
+  "anchor": {
+    "event_id": "d0e361617c5005dd336efefd1b869f57f72114551019fe1d195c2435d2225587",
+    "pubkey": "e13475107d30c918ec664adf2ab1141024a22fb35190f82c9e933704fa49af41",
+    "relays": [
+      "wss://relay.damus.io",
+      "wss://nos.lol",
+      "wss://relay.primal.net"
+    ],
+    "status": "partial",
+    "published_at": "2026-10-06T14:09:50.695Z",
+    "schema_version": "zambo-receipt-anchor/1",
+    "envelope": {
+      "anchored_at": "2026-10-06T14:09:44.644Z",
+      "evidence_url": "https://zambo.dev/api/evidence/b985d17f844870425f1a00b8e87bad1a33e46113a8e27d73947acf2e5533cfd1",
+      "receipt_uuid": "c5dadb0a-8f99-40f6-b30a-40852435b752",
+      "output_sha256": "sha256:86b2cd9f80d01e8a8a742903a74940bd09028322e7786dbe44f59683bb11e319",
+      "schema_version": "zambo-receipt-anchor/1",
+      "evidence_sha256": "sha256:b985d17f844870425f1a00b8e87bad1a33e46113a8e27d73947acf2e5533cfd1",
+      "evidence_byte_length": 99
+    },
+    "envelope_bytes": "{\"anchored_at\":\"2026-10-06T14:09:44.644Z\",\"evidence_byte_length\":99,\"evidence_sha256\":\"sha256:b985d17f844870425f1a00b8e87bad1a33e46113a8e27d73947acf2e5533cfd1\",\"evidence_url\":\"https://zambo.dev/api/evidence/b985d17f844870425f1a00b8e87bad1a33e46113a8e27d73947acf2e5533cfd1\",\"output_sha256\":\"sha256:86b2cd9f80d01e8a8a742903a74940bd09028322e7786dbe44f59683bb11e319\",\"receipt_uuid\":\"c5dadb0a-8f99-40f6-b30a-40852435b752\",\"schema_version\":\"zambo-receipt-anchor/1\"}"
+  },
+  "receipt_profile": "zambo-hosted-receipt/1",
+  "schema_url": "https://zambo.dev/aer-1/hosted-profile.schema.json",
+  "api_version": 1,
+  "verification_scope": "sha256_commitment_only",
+  "checks": {
+    "commitment_matches": {
+      "label": "SHA-256 commitment",
+      "passed": true,
+      "status": "pass",
+      "detail": "The exact decoded canonical bytes match the stored SHA-256 output hash."
+    },
+    "signature": {
+      "label": "Ed25519 signature (not checked)",
+      "passed": false,
+      "status": "not_checked",
+      "detail": "No Ed25519 signature or pinned signing key was checked."
+    },
+    "chain": {
+      "label": "Receipt chain (not checked)",
+      "passed": false,
+      "status": "not_checked",
+      "detail": "No append-only receipt-chain proof was checked."
+    },
+    "issued_by_zambo_dev": {
+      "label": "Issued by zambo.dev",
+      "passed": true,
+      "detail": "Receipt is served from the zambo.dev receipt store."
+    },
+    "immutable_log_timestamp": {
+      "label": "Stored timestamp",
+      "passed": true,
+      "timestamp": "2026-10-06T14:09:44.678Z",
+      "detail": "The receipt store reports 2026-10-06T14:09:44.678Z; immutability is not checked here."
+    },
+    "receipt_schema_version": "0.3",
+    "signature_valid": {
+      "label": "Ed25519 signature (not checked)",
+      "passed": false,
+      "status": "not_checked",
+      "detail": "Compatibility field only. No Ed25519 signature was checked; use API v2 checks.commitment_matches for the SHA-256 commitment."
+    },
+    "chain_valid": {
+      "label": "Receipt chain (not checked)",
+      "passed": false,
+      "status": "not_checked",
+      "detail": "This endpoint does not verify an append-only chain."
+    }
+  }
+}
