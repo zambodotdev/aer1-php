@@ -93,6 +93,27 @@
         "expected_verdict": "invalid",
         "rejected_by": "missing output_hash: seq-output-v1 leaf cannot be formed (fail closed)"
       }
+    },
+    {
+      "name": "seq-output-v1-thirteen-step",
+      "merkle_version": "seq-output-v1",
+      "steps": [
+        { "seq": 1, "receipt_id": "receipt-1", "output_hash": "ec172906d80e775dfe6a337390cf7f325cb4af1c7d7d16032b33ec4f5035ad30" },
+        { "seq": 2, "receipt_id": "receipt-2", "output_hash": "a84baf0bd292f2db88d31c923f4ffc6dce5058f9d0d9bf01b18be444e61a2b0e" },
+        { "seq": 3, "receipt_id": "receipt-3", "output_hash": "a260336e4da92509bbf77b414f6c48e369016e2b69dd7ede51c2337d6f25c3a0" },
+        { "seq": 4, "receipt_id": "receipt-4", "output_hash": "56c6cb8b32e1791f7545c5b60694509a240fad5f21e9316ef41aefcf51de76d4" },
+        { "seq": 5, "receipt_id": "receipt-5", "output_hash": "f1b42b9a542b93c51d2f12d465adf0a2fb23949b5be8a74ff988803bd831ebf3" },
+        { "seq": 6, "receipt_id": "receipt-6", "output_hash": "6a929607b7fb951c520e9f3cf1d56795446260329f7d8506ef8554a1943c9faa" },
+        { "seq": 7, "receipt_id": "receipt-7", "output_hash": "de036c217ed93eda7f8924b1362c272ef6c3b841826baf21cdcb964bafbddf0a" },
+        { "seq": 8, "receipt_id": "receipt-8", "output_hash": "bb7b4c7b1a3d7582a73502adb55eb27dedb3ef49f2698d7587bb631bcbe171eb" },
+        { "seq": 9, "receipt_id": "receipt-9", "output_hash": "3bbd3021faa8ad0e23dc3f0b9de24cd87310d6b2dd8a6cd18f10cd2d841de2a3" },
+        { "seq": 10, "receipt_id": "receipt-10", "output_hash": "42dc8e1d5e75f384bcc2cb69ac8c88d0068dce616b06c27b8d8cfa42aed77e62" },
+        { "seq": 11, "receipt_id": "receipt-11", "output_hash": "a81739e373b8deabe167cb82a4d53d359a5704f754046226360511c19efe212e" },
+        { "seq": 12, "receipt_id": "receipt-12", "output_hash": "438a901261341c430b1f348d809dbd1a958f83fac40c05834c24fb65e7475f79" },
+        { "seq": 13, "receipt_id": "receipt-13", "output_hash": "0bea55fbf67cf233bbf8e3b91670c07729ab2e6bdb2c01d68c3ef25f9026ca95" }
+      ],
+      "merkle_root": "c2600008015507e5e3b20bed3dfb05982e59b2f7d077c723ebc3ed89e9465b66",
+      "expected_verdict": "valid"
     }
   ]
 }

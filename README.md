@@ -14,8 +14,8 @@ worth proving: "done" becomes something you can check, not something
 you have to trust.
 
 The standard is AER-1, published as the IETF Internet-Draft
-draft-zambo-aer1-26. The public conformance corpus (126 vectors,
-129 checks, kit v1.5.7) is the test that decides whether a verifier
+draft-zambo-aer1-26. The public conformance corpus (143 vectors,
+146 checks, kit v1.5.7) is the test that decides whether a verifier
 is conformant. Earlier third-party PHP attempts were checked against
 it and were not conformant. This one is, and the corpus is bundled
 here so you can re-run the test yourself.
@@ -42,7 +42,7 @@ php bin/verify.php path/to/receipt.json
 A green corpus run ends with:
 
 ```
-CONFORMANCE OK: 126 vectors, 129 checks, sha256:ccaff18aba8f4e70aacf8a469403e9a6f12f025ad39df88079398bbe13100ce8
+CONFORMANCE OK: 143 vectors, 146 checks, sha256:60bf73f325793e16843370cfa24903bb0d017525cb297e42bebc35857e2db0d2
 ```
 
 That digest is the published evaluated-set digest of the corpus.
@@ -53,14 +53,11 @@ same bytes everyone else tests against.
 
 ## Measured results
 
-Measured on 2026-10-29 with PHP 8.4.13 (CLI) on Linux:
+Measured on 2026-11-09 with PHP 8.3.6 (CLI) on Linux:
 
-- 126 vectors, 129 checks: all pass.
+- 143 vectors, 146 checks: all pass.
 - The evaluated-set digest computed by this runner equals the
-  published digest, sha256:ccaff18aba8f4e70aacf8a469403e9a6f12f025ad39df88079398bbe13100ce8.
-- The runner's full output is byte-identical to the reference
-  Python runner's output over the same corpus: same verdicts, same
-  rejection reasons, same per-vector evaluated-set lines.
+  published digest, sha256:60bf73f325793e16843370cfa24903bb0d017525cb297e42bebc35857e2db0d2.
 
 ## The MCP server: check the job before you believe it
 

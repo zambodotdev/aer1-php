@@ -1,0 +1,14 @@
+{
+  "id": "0e29deb3-ef63-4abb-9a21-2f233a72b55e",
+  "receipt_schema_version": "0.4",
+  "created_at": "2026-10-30T12:00:00.000Z",
+  "tool": {
+    "name": "get_weather",
+    "version": "4.0.0",
+    "scope": "public"
+  },
+  "provenance_class": "EXECUTED BY ZAMBO",
+  "canonical_bytes": "eyJpbnB1dHMiOnsicSI6ImRlcHRoIHByb2JlIn0sImlzc3Vlcl9jbGFpbXMiOnsicHJvdmVuYW5jZV9jbGFzcyI6IkVYRUNVVEVEIEJZIFpBTUJPIn0sIm91dHB1dHMiOnsidHJlZSI6eyJjaGlsZCI6W3siY2hpbGQiOlt7ImNoaWxkIjpbeyJjaGlsZCI6W3siY2hpbGQiOlt7ImNoaWxkIjpbeyJjaGlsZCI6W3siY2hpbGQiOlt7ImNoaWxkIjpbeyJjaGlsZCI6W3siY2hpbGQiOlt7ImNoaWxkIjpbXSwibGV2ZWwiOjEyfV0sImxldmVsIjoxMX1dLCJsZXZlbCI6MTB9XSwibGV2ZWwiOjl9XSwibGV2ZWwiOjh9XSwibGV2ZWwiOjd9XSwibGV2ZWwiOjZ9XSwibGV2ZWwiOjV9XSwibGV2ZWwiOjR9XSwibGV2ZWwiOjN9XSwibGV2ZWwiOjJ9XSwibGV2ZWwiOjF9fSwicmVjZWlwdF9zY2hlbWFfdmVyc2lvbiI6IjAuNCIsInRvb2wiOiJnZXRfd2VhdGhlciJ9",
+  "output_hash": "sha256:2eee43e3fda022203e914a0a2fd0c45e966c1e8b1112eea777028c4a51e9d9be",
+  "verification_status": "verified"
+}

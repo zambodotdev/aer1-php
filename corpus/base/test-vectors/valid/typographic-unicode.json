@@ -1,0 +1,14 @@
+{
+  "id": "e51307fc-d8a6-48cd-b649-cf8c9e1a951f",
+  "receipt_schema_version": "0.4",
+  "created_at": "2026-10-30T12:00:00.000Z",
+  "tool": {
+    "name": "get_weather",
+    "version": "4.0.0",
+    "scope": "public"
+  },
+  "provenance_class": "EXECUTED BY ZAMBO",
+  "canonical_bytes": "eyJpbnB1dHMiOnsicSI6InR5cG9ncmFwaGljIHVuaWNvZGUgcHJvYmUifSwiaXNzdWVyX2NsYWltcyI6eyJwcm92ZW5hbmNlX2NsYXNzIjoiRVhFQ1VURUQgQlkgWkFNQk8ifSwib3V0cHV0cyI6eyJ0ZXh0IjoiaXTigJlzIGEgd2VsbOKAkWtub3duIGZhY3Qg4oCUIHRoZSBhZ2VudOKAmXMgbG9nIOKAkyBlbnRyeSA14oCvMDAwIn0sInJlY2VpcHRfc2NoZW1hX3ZlcnNpb24iOiIwLjQiLCJ0b29sIjoiZ2V0X3dlYXRoZXIifQ==",
+  "output_hash": "sha256:505fc1ba6e56f530c9336b19d26a4d78150c863d0d0478b65a6bebb4089bbf81",
+  "verification_status": "verified"
+}
